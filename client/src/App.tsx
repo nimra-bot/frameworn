@@ -10,7 +10,7 @@ import ResetPassword from './pages/ResetPassword';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import ProductDetails from './pages/ProductDetails';
-import Orders from './pages/orders';
+import Orders from './pages/Orders';
 import About from './pages/About';
 import NewArrivals from './pages/NewArrivals';
 import Outerwear from './pages/Outerwear';
