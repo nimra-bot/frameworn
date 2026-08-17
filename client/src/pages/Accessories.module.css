@@ -1,0 +1,143 @@
+.page {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  padding: 130px 32px 100px;
+}
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0 75px;
+}
+
+.eyebrow {
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  font-family: var(--display);
+  font-size: clamp(60px, 9vw, 120px);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 22px 0 25px;
+}
+
+.header p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  min-width: 0;
+}
+
+.imageLink {
+  display: block;
+}
+
+.imageBox {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imageBox img {
+  transform: scale(1.04);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+  padding: 17px 2px;
+}
+
+.name {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.rating {
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.price {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 7px;
+}
+
+.addButton {
+  flex-shrink: 0;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  opacity: 0.8;
+}
+
+.message {
+  text-align: center;
+  color: var(--grey);
+  padding: 60px 0;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 100px 18px 70px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 58px;
+  }
+}

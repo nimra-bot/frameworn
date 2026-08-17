@@ -1,0 +1,289 @@
+.page {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  padding: 120px 0 100px;
+}
+
+.message {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.message p {
+  color: var(--grey);
+  font-size: 15px;
+}
+
+.back {
+  display: inline-block;
+  color: var(--grey);
+  font-size: 13px;
+  margin-bottom: 45px;
+  transition: 0.2s;
+}
+
+.back:hover {
+  color: var(--white);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.imageBox {
+  width: 100%;
+  height: 680px;
+  background: var(--surface-2);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.info {
+  padding: 35px 20px 40px 0;
+  max-width: 520px;
+}
+
+.category {
+  display: block;
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.info h1 {
+  font-family: var(--display);
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 0.95;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.rating {
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.price {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin-bottom: 28px;
+}
+
+.description {
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity button:hover {
+  background: var(--surface-3);
+}
+
+.quantity span {
+  min-width: 20px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.addButton {
+  width: 100%;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  padding: 17px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addButton:hover {
+  opacity: 0.85;
+}
+
+.added {
+  background: var(--surface-3);
+  color: var(--white);
+}
+
+.bagButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 15px 20px;
+  border: 1px solid var(--white);
+  border-radius: 12px;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.bagButton:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.continue {
+  display: block;
+  text-align: center;
+  color: var(--grey);
+  font-size: 12.5px;
+  margin-top: 22px;
+  text-decoration: underline;
+}
+
+.continue:hover {
+  color: var(--white);
+}
+
+.backButton {
+  display: inline-block;
+  padding: 13px 25px;
+  border: 1px solid var(--white);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.backButton:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+  .page {
+    padding: 100px 0 80px;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageBox {
+    height: 600px;
+  }
+
+  .info {
+    max-width: 700px;
+    padding: 0 20px 40px 0;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .page {
+    padding: 90px 0 60px;
+  }
+
+  .back {
+    margin-bottom: 25px;
+    padding-left: 5px;
+  }
+
+  .product {
+    gap: 25px;
+  }
+
+  .imageBox {
+    height: 430px;
+    border-radius: 12px;
+  }
+
+  .info {
+    padding: 0 5px 30px;
+  }
+
+  .info h1 {
+    font-size: 44px;
+  }
+
+  .price {
+    font-size: 19px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .quantitySection {
+    margin-top: 10px;
+  }
+
+  .addButton {
+    padding: 16px;
+  }
+}

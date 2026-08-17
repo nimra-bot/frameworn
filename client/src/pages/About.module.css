@@ -1,0 +1,170 @@
+.page {
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  padding-top: 110px;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 32px 140px;
+}
+
+.eyebrow {
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(58px, 9vw, 120px);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 25px 0 40px;
+  max-width: 950px;
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--grey);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.story {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 70px;
+  padding: 100px max(32px, calc((100vw - 1100px) / 2));
+}
+
+.label {
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.content h2 {
+  font-family: var(--display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0 0 35px;
+}
+
+.content p {
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.philosophy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 32px;
+  text-align: center;
+}
+
+.philosophy h2 {
+  font-family: var(--display);
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 25px 0 35px;
+}
+
+.philosophy p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--grey);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.cta {
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 110px 24px 130px;
+}
+
+.cta h2 {
+  font-family: var(--display);
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 25px 0 45px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--white);
+  color: var(--black);
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-top: 85px;
+  }
+
+  .hero {
+    padding: 70px 20px 90px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 70px 20px;
+  }
+
+  .content h2 {
+    font-size: 46px;
+  }
+
+  .philosophy {
+    padding: 90px 20px;
+  }
+
+  .philosophy h2 {
+    font-size: 58px;
+  }
+
+  .cta {
+    padding: 80px 20px 100px;
+  }
+
+  .cta h2 {
+    font-size: 58px;
+  }
+}
+

@@ -1,0 +1,295 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 26px 0;
+  transition: background 0.3s, padding 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 16px 0;
+  border-color: var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+  gap: 20px;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.links a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--grey);
+  letter-spacing: 0.3px;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  color: var(--white);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.userName {
+  font-size: 13px;
+  color: var(--grey);
+}
+
+.textBtn {
+  font-size: 13px;
+  color: var(--grey);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.textBtn:hover {
+  color: var(--white);
+}
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  font-size: 21px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.hamburger:hover,
+.menuActive {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* =========================
+   MENU OVERLAY
+========================= */
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlayShow {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   SIDE MENU
+========================= */
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+
+  width: min(380px, 88vw);
+  height: 100vh;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-left: 1px solid var(--line);
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+.menuShow {
+  transform: translateX(0);
+}
+
+.menuHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+
+  font-family: var(--display);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.closeMenu {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--white);
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.closeMenu:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.menuLinks a,
+.menuLinks button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 17px 0;
+
+  border: none;
+  border-bottom: 1px solid var(--line);
+
+  background: transparent;
+
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 15px;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.menuLinks a:hover,
+.menuLinks button:hover {
+  padding-left: 8px;
+  color: var(--grey);
+}
+
+.menuLinks span {
+  color: var(--grey);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+/* =========================
+   MENU BOTTOM
+========================= */
+
+.menuBottom {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  color: var(--grey);
+
+  font-size: 12px;
+}
+
+.menuBottom span {
+  color: var(--white);
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menuBottom small {
+  font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 860px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .userName {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .inner {
+    padding: 0 18px;
+  }
+
+  .nav {
+    padding: 20px 0;
+  }
+
+  .actions {
+    gap: 8px;
+  }
+
+  .actions :global(.btn-outline) {
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .menu {
+    padding: 24px 20px;
+  }
+}
